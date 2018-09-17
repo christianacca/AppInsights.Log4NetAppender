@@ -1,8 +1,8 @@
 # Assumes you have defined the following variables in the azure devops project:
 # - BuildConfiguration (default value Release)
 
-variables:
-  BuildConfiguration: Release
+# variables:
+#   BuildConfiguration: Release
 
 resources:
 - repo: self
