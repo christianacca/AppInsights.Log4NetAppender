@@ -16,7 +16,7 @@ Support sending CustomEvent telemetry items</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CcAcca.LogEvents" Version="1.0.1" />
+    <PackageReference Include="CcAcca.LogEvents" Version="1.1.0" />
     <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.7.2" />
   </ItemGroup>

@@ -183,7 +183,8 @@ namespace CcAcca.AppInsights.Log4NetAppender
             AddLog4NetProperties(loggingEvent.GetProperties(), eventInfo.Properties);
             try
             {
-                this.telemetryClient.TrackEvent(eventInfo.Name, eventInfo.Properties, eventInfo.Metrics);
+                this.telemetryClient.TrackEvent(eventInfo.FullName, eventInfo.GetQualifiedProperties(),
+                    eventInfo.GetQualifiedMetrics());
             }
             catch (ArgumentNullException exception)
             {
