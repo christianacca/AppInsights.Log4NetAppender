@@ -9,7 +9,7 @@
 This is a fork of 'Microsoft.ApplicationInsights.Log4NetAppender' adding the following extras:
 
 Support sending CustomEvent telemetry items</Description>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageTags>ApplicationInsights Analytics Telemetry</PackageTags>
     <RepositoryUrl>https://github.com/christianacca/AppInsights.Log4NetAppender</RepositoryUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/christianacca/AppInsights.Log4NetAppender/master/LICENSE</PackageLicenseUrl>
