@@ -180,10 +180,11 @@ namespace CcAcca.AppInsights.Log4NetAppender
         private void SendEvent(LoggingEvent loggingEvent)
         {
             var eventInfo = (LogEventInfo)loggingEvent.MessageObject;
-            AddLog4NetProperties(loggingEvent.GetProperties(), eventInfo.Properties);
+            var properties = eventInfo.GetQualifiedProperties();
+            AddLog4NetProperties(loggingEvent.GetProperties(), properties);
             try
             {
-                this.telemetryClient.TrackEvent(eventInfo.FullName, eventInfo.GetQualifiedProperties(),
+                this.telemetryClient.TrackEvent(eventInfo.FullName, properties,
                     eventInfo.GetQualifiedMetrics());
             }
             catch (ArgumentNullException exception)
