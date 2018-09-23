@@ -180,8 +180,15 @@ namespace CcAcca.AppInsights.Log4NetAppender
         private void SendEvent(LoggingEvent loggingEvent)
         {
             var eventInfo = (LogEventInfo)loggingEvent.MessageObject;
+
             var properties = eventInfo.GetQualifiedProperties();
-            AddLog4NetProperties(loggingEvent.GetProperties(), properties);
+            var log4netProperties = loggingEvent.GetProperties();
+            if (properties == null && log4netProperties?.Count > 0)
+            {
+                properties = new Dictionary<string, string>(log4netProperties.Count);
+            }
+
+            AddLog4NetProperties(log4netProperties, properties);
             try
             {
                 this.telemetryClient.TrackEvent(eventInfo.FullName, properties,
