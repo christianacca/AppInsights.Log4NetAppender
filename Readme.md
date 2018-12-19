@@ -1,4 +1,4 @@
-# AppInsights.Log4NetAppender
+# AppInsights.Log4NetAppender [![Build Status](https://dev.azure.com/christianacca/AppInsights.Log4NetAppender/_apis/build/status/AppInsights.Log4NetAppender-CI?branchName=master)](https://dev.azure.com/christianacca/AppInsights.Log4NetAppender/_build/latest?definitionId=5?branchName=master)
 
 Fork of Microsoft.ApplicationInsights.Log4NetAppender that adds support for sending custom events
 
